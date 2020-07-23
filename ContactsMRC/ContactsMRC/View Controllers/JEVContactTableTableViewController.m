@@ -21,6 +21,37 @@
 
 @implementation JEVContactTableTableViewController
 
+// MARK: - Init
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self)
+    {
+        //MARK: TO DO
+        [self setUp];
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        [self setUp];
+    }
+    
+    return self;
+}
+
+- (void)setUp {
+    _contactController = [[JEVContactController alloc] init];
+}
+
+- (void)dealloc {
+    [_contactController release];
+    [super dealloc];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
