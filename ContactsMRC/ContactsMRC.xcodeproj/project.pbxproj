@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8E1AC57924C9FA4C00EE8F67 /* JEVContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AC57824C9FA4C00EE8F67 /* JEVContactController.m */; };
 		8E1AC57C24C9FA5B00EE8F67 /* JEVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AC57B24C9FA5B00EE8F67 /* JEVContact.m */; };
+		8E1AC57F24CA01DB00EE8F67 /* JEVContactTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AC57E24CA01DB00EE8F67 /* JEVContactTableTableViewController.m */; };
+		8E1AC58224CA021B00EE8F67 /* JEVContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AC58124CA021B00EE8F67 /* JEVContactDetailViewController.m */; };
 		8EA07B9624C9E93C00A77FCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA07B9524C9E93C00A77FCC /* AppDelegate.m */; };
 		8EA07B9924C9E93C00A77FCC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA07B9824C9E93C00A77FCC /* SceneDelegate.m */; };
 		8EA07B9F24C9E93C00A77FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA07B9D24C9E93C00A77FCC /* Main.storyboard */; };
@@ -41,6 +43,10 @@
 		8E1AC57824C9FA4C00EE8F67 /* JEVContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVContactController.m; sourceTree = "<group>"; };
 		8E1AC57A24C9FA5B00EE8F67 /* JEVContact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JEVContact.h; sourceTree = "<group>"; };
 		8E1AC57B24C9FA5B00EE8F67 /* JEVContact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVContact.m; sourceTree = "<group>"; };
+		8E1AC57D24CA01DB00EE8F67 /* JEVContactTableTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JEVContactTableTableViewController.h; sourceTree = "<group>"; };
+		8E1AC57E24CA01DB00EE8F67 /* JEVContactTableTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVContactTableTableViewController.m; sourceTree = "<group>"; };
+		8E1AC58024CA021B00EE8F67 /* JEVContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JEVContactDetailViewController.h; sourceTree = "<group>"; };
+		8E1AC58124CA021B00EE8F67 /* JEVContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEVContactDetailViewController.m; sourceTree = "<group>"; };
 		8EA07B9124C9E93C00A77FCC /* ContactsMRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsMRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA07B9424C9E93C00A77FCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EA07B9524C9E93C00A77FCC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,6 +104,10 @@
 		8E1AC57624C9FA1400EE8F67 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E1AC57D24CA01DB00EE8F67 /* JEVContactTableTableViewController.h */,
+				8E1AC57E24CA01DB00EE8F67 /* JEVContactTableTableViewController.m */,
+				8E1AC58024CA021B00EE8F67 /* JEVContactDetailViewController.h */,
+				8E1AC58124CA021B00EE8F67 /* JEVContactDetailViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -301,6 +311,8 @@
 				8EA07BA724C9E94000A77FCC /* main.m in Sources */,
 				8E1AC57924C9FA4C00EE8F67 /* JEVContactController.m in Sources */,
 				8EA07B9924C9E93C00A77FCC /* SceneDelegate.m in Sources */,
+				8E1AC57F24CA01DB00EE8F67 /* JEVContactTableTableViewController.m in Sources */,
+				8E1AC58224CA021B00EE8F67 /* JEVContactDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

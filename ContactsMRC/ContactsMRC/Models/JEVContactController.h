@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class JEVContact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JEVContactController : NSObject
+
+@property (nonatomic, retain, readonly) NSArray<JEVContact *> *contacts;
+
+- (void)addContact:(JEVContact *)contact;
+- (void)removeContactAtIndex:(NSInteger)index;
 
 @end
 
