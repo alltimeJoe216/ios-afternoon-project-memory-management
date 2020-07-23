@@ -52,31 +52,56 @@
     [super dealloc];
 }
 
+//MARK: - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Some mock data to test
+    JEVContact *joe = [JEVContact contactWithName:@"Joseph Veverka" emailAddress:@"JoeVeverka89@gmail.com" phoneNumber:@"123-456-7890"];
+    JEVContact *myNameJeff = [JEVContact contactWithName:@"Jeff Jefferson" emailAddress:@"JeffJefferson@gmail.com" phoneNumber:@"123-456-7890"];
+    
+    [self.contactController addContact:joe];
+    [self.contactController addContact:myNameJeff];
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.contactController.contacts.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-  
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = self.contactController.contacts[indexPath.row].name;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.contactController removeContactAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- 
+    if ([segue.identifier isEqualToString:@"ShowContactSegue"]) {
+        JEVContactDetailViewController *contactDetailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        contactDetailVC.contact = self.contactController.contacts[indexPath.row];
+    } if ([segue.identifier isEqualToString:@"AddContactSegue"]) {
+        JEVContactDetailViewController *contactDetailVC = segue.destinationViewController;
+        contactDetailVC.conctactController = self.contactController;
+    }
 }
-
-
 @end

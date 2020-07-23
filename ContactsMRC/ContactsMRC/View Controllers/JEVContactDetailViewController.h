@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class JEVContact;
+@class JEVContactController;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JEVContactDetailViewController : UIViewController
+@interface JEVContactDetailViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, retain) JEVContactController *contactController;
+@property (nonatomic, retain) JEVContact *contact;
 
 @end
 
